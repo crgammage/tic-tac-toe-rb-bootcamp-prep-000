@@ -75,7 +75,7 @@ def turn_count(board)
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combo|
-    position_taken?(board, win, combo[0]) && board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]]
+    position_taken?(board, index, combo[0]) && board[win_combo[0]] == board[win_combo[1]] && board[win_combo[1]] == board[win_combo[2]]
   end
 end
 
