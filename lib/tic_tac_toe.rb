@@ -115,11 +115,9 @@ def winner(board)
 end
 
 def play(board)
-  i = 0
-  until i = 9
-  if over?(board) == false && draw?(board) == false
+  until over?(board)
     turn(board)
-    i += 1
+  end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
     return "Congratulations, #{winner(board)}"
