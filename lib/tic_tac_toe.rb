@@ -117,12 +117,11 @@ end
 def play(board)
   i = 0
   until i = 9
+  if over?(board) == false
     turn(board)
     i += 1
   end
-  if over?(board) == false
-    turn(board)
-  elsif won?(board)
+  if won?(board)
     winner(board) == "X" || winner(board) == "O"
     return "Congratulations, #{winner(board)}"
   elsif draw?(board)
