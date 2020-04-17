@@ -120,7 +120,8 @@ def play(board)
     turn(board)
     i += 1
   end
-  if won?(board)
+  if over?(board) == false
+    won?(board)
     winner(board) == "X" || winner(board) == "O"
     return "Congratulations, #{winner(board)}"
   elsif draw?(board)
