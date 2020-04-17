@@ -121,7 +121,7 @@ def play(board)
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
-    return "Congratulations, #{winner(board)]}"
+    return "Congratulations, #{winner(board)}"
   elsif draw?(board)
     puts "Cat's Game!"
   end
