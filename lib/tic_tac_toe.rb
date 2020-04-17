@@ -119,7 +119,8 @@ def play(board)
     turn(board)
     i += 1
   end
-  if winner(board) == "X" || winner(board) == "O"
+  if won?(board)
+    winner(board) == "X" || winner(board) == "O"
     return "Congratulations, #{board[won?(board)[0]}"
   elsif draw?(board)
     puts "It was a draw."
