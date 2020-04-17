@@ -121,7 +121,8 @@ def play(board)
     i += 1
   end
   if over?(board) == false
-    won?(board)
+    turn(board)
+  elsif won?(board)
     winner(board) == "X" || winner(board) == "O"
     return "Congratulations, #{winner(board)}"
   elsif draw?(board)
