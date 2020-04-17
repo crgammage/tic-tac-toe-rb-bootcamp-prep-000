@@ -117,7 +117,7 @@ end
 def play(board)
   i = 0
   until i = 9
-  if over?(board) == false || draw?(board) == false
+  if over?(board) == false && draw?(board) == false
     turn(board)
     i += 1
   if won?(board)
